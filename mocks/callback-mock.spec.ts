@@ -1,4 +1,4 @@
-const handleTicket = (age, cbYoung, cbAdult) => {
+const handleTicket = (age: number, cbYoung: Function, cbAdult: Function) => {
   if (age <= 13) {
     cbYoung();
   }
@@ -9,8 +9,8 @@ const handleTicket = (age, cbYoung, cbAdult) => {
 
 describe("handeTicket", () => {
   it("should handle ticket for young ticket holders", () => {
-    const mockYoung = jest.fn(() => {});
-    const mockAdult = jest.fn(() => {});
+    const mockYoung: Function = jest.fn(() => {});
+    const mockAdult: Function = jest.fn(() => {});
 
     handleTicket(12, mockYoung, mockAdult);
 
@@ -19,8 +19,8 @@ describe("handeTicket", () => {
   });
 
   it("should handle ticket for adult ticket holders", () => {
-    const mockYoung = jest.fn(() => {});
-    const mockAdult = jest.fn(() => {});
+    const mockYoung: Function = jest.fn(() => {});
+    const mockAdult: Function = jest.fn(() => {});
 
     handleTicket(16, mockYoung, mockAdult);
 
